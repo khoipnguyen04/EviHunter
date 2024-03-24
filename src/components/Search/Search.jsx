@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import './SearchStyling.css';
 
 
-const SearchBar = ({ placeholder, setResults }) => {
+export const SearchBar = ({ placeholder, setResults }) => {
     const [input, setInput] = useState("");
 
     const fetchData = (value) => {
@@ -37,7 +38,7 @@ const SearchBar = ({ placeholder, setResults }) => {
 };
 
 
-const SearchResult = ({ results }) => {
+export const SearchResult = ({ results }) => {
     return  (
         <div className='result-list'>
             {results.map((result, id) => {
@@ -48,4 +49,3 @@ const SearchResult = ({ results }) => {
 };
 
 
-export default {SearchBar, SearchResult};
